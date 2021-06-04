@@ -1,13 +1,11 @@
 #!/bin/sh
+declare -A compute
 read -p "Enter first number :" a
 read -p "Enter second number :" b 
 read -p "Enter third number :" c
 echo "Entered Numbers :" $a "," $b "," $c
-result1=$(($a + ($b * c)))
-echo $result1
-result2=$((($a * $b) + c))
-echo $result2
-result3=$((c + (a / b)))
-echo $result3
-result4=$(((a % b) + c))
-echo $result4
+compute['result1']=$(($a + ($b * c)))
+compute['result2']=$((($a * $b) + c))
+compute['result3']=$((c + (a / b)))
+compute['result4']=$(((a % b) + c))
+echo ${compute[@]}
