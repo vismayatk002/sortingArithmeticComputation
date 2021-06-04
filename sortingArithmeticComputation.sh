@@ -16,3 +16,18 @@ do
 	((i++))
 done
 echo "Results in Array :" ${computeArray[@]}
+for (( i = 0; i < 4 ; i++ ))
+do
+	for (( j = $i+1; j < 4 ; j++ ))
+	do
+
+		if [ ${computeArray[i]} -lt ${computeArray[j]} ]
+		then
+
+			 temp=${computeArray[i]}
+			 computeArray[i]=${computeArray[j]}
+			 computeArray[j]=$temp
+		fi
+	done
+done
+echo "Sorted Array :" ${computeArray[@]}
