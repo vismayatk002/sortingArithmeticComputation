@@ -5,3 +5,5 @@ read -p "Enter third number :" c
 echo "Entered Numbers :" $a "," $b "," $c
 result1=$(($a + ($b * c)))
 echo $result1
+result2=$((($a * $b) + c))
+echo $result2
