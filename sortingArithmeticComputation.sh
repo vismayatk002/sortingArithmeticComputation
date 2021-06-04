@@ -21,12 +21,12 @@ do
 	for (( j = $i+1; j < 4 ; j++ ))
 	do
 
-		if [ ${computeArray[i]} -lt ${computeArray[j]} ]
+		if [ ${computeArray[i]} -gt ${computeArray[j]} ]
 		then
 
-			 temp=${computeArray[i]}
-			 computeArray[i]=${computeArray[j]}
-			 computeArray[j]=$temp
+			temp=${computeArray[i]}
+			computeArray[i]=${computeArray[j]}
+			computeArray[j]=$temp
 		fi
 	done
 done
